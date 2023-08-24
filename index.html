@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biglietto Treno</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="form">
         <h1>Inserisci i tuoi dati</h1>
         <div>
             <input type="text" id="fullName" placeholder="Nome e Cognome">
-            <input type="text" id="distance" placeholder="Km da percorrere">
+            <input type="number" id="distance" placeholder="Km da percorrere">
             <select name="" id="age">
                 <option value="minor">Minorenne</option>
                 <option value="adult">Adulto</option>
@@ -24,7 +27,13 @@
         </div>
     </div>
 
-    <div class="Tickets"></div>
+    <div id="Tickets" class="Tickets">
+        <div class="ticketdetail">
+            <h2>DETTAGLIO PASSEGGERI</h2> 
+        </div>
+        
+        
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@ let buttonDelete = document.getElementById("delete");
 const pricePerKm = 0.21;
 
 buttonCreate.addEventListener("click", function(){
+    let ticketType = "Biglietto standard";
     let distanceValue = Number(distance.value);
     let ticketPrize = pricePerKm * distanceValue;
     //console.log(ticketPrize);
@@ -30,17 +31,50 @@ buttonCreate.addEventListener("click", function(){
     let finalPrize;
     if (ageValue === "minor") {
         finalPrize = ticketPrize * 0.8;
+        ticketType = "Biglietto scontato";
     } else if (ageValue === "over"){
         finalPrize = ticketPrize * 0.6;
+        ticketType = "Biglietto scontato";
     } else if (ageValue === "adult"){
         finalPrize = ticketPrize;
     }
 
     console.log(finalPrize);
+
+    let html =
+    '<div class="ticket">'+
+        '<div class="ticketname">'+
+            '<h5>NOME PASSEGGERO</h5>'+
+            '<div>'+fullName.value+'</div>'+
+        '</div>'+
+        '<div class="ticketinfo">'+
+            '<table>'+
+                '<thead>'+
+                    '<td>Offerta</td>'+
+                    '<td>Carrozza</td>'+
+                    '<td>Codice CP</td>'+
+                    '<td>Costo Biglietto</td>'+
+                '</thead>'+
+                '<tr>'+
+                    '<td>'+ticketType+'</td>'+
+                    '<td>'+(Math.random() * 10).toFixed(0)+'</td>'+
+                    '<td>'+(Math.random() * 10000).toFixed(0)+'</td>'+
+                    '<td>'+finalPrize.toFixed(2)+'€</td>'+
+                '</tr>'+
+            '</table>'+
+        '</div>'+
+    '</div>';
+
+    document.getElementById("Tickets").innerHTML+=html;
 })
 
 buttonDelete.addEventListener("click", function(){
     fullName.value = "";
     distance.value = "";
+
+    document.getElementById("Tickets").innerHTML=
+    '<div class="ticketdetail">'+
+        '<h3>DETTAGLIO PASSEGGERI</h3>'+
+    '</div>';
 })
  

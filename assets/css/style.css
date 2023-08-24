@@ -2,21 +2,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body{
-    background-color: gainsboro;
+    background-color: rgb(198, 240, 243);
 }
+h1{
+    text-transform: uppercase;
+}
+
 
 .form{
     margin: 2rem auto;
     width: 90%;
-    background-color: lightgray;
+    background-color: rgb(160, 245, 243);
     display: flex;
     padding: 0.5rem;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    box-shadow: 0 0 0.5rem black;
+    border-radius: 1rem;
 }
 
 .form div{
@@ -24,9 +31,63 @@ body{
 }
 
 .form input, .form button, .form select {
-    padding: 0.3rem;
+    padding: 0.6rem;
+    margin: 0 1.5rem;
 }
 
 .form button:hover{
     cursor: pointer;
+}
+.Tickets{
+    border-radius: 1rem;
+    background-color: white;
+    margin: 0 70px;
+    padding: 0.5rem;
+}
+
+.ticketdetail, .ticket{
+    padding: 1rem;
+    background-color: rgb(160, 245, 243);
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 0 3px black;
+}
+
+h2{
+    text-align: center;
+}
+
+.ticket{
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
+.ticketname{
+    background-color: white;
+    color: black;
+    width: 15%;
+    height: 100%;
+    margin: 0;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px black;
+    padding: 2px;
+}
+
+
+
+
+.ticketinfo{
+    width: 80%;
+    margin-left: 1rem;
+}
+
+table{ 
+    width: 100%;
+    line-height: 3rem;
+}
+
+thead{
+    font-weight: 900;
 }
