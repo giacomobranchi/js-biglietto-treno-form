@@ -12,9 +12,9 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 Questo richiederà un minimo di ricerca.*/
 
-let fullName;
-let distance;
-let age;
+let fullName = document.getElementById("fullName");
+let distance = document.getElementById("distance");
+let age = document.getElementById("age");
 
 let buttonCreate = document.getElementById("create");
 let buttonDelete = document.getElementById("delete");
@@ -22,20 +22,25 @@ let buttonDelete = document.getElementById("delete");
 const pricePerKm = 0.21;
 
 buttonCreate.addEventListener("click", function(){
-    distance = Number(document.getElementById("distance").value);
-    let ticketPrize = pricePerKm * distance;
+    let distanceValue = Number(distance.value);
+    let ticketPrize = pricePerKm * distanceValue;
     //console.log(ticketPrize);
-    age = document.getElementById("age").value;
+    let ageValue = age.value;
     //console.log(age);
     let finalPrize;
-    if (age === "minor") {
+    if (ageValue === "minor") {
         finalPrize = ticketPrize * 0.8;
-    } else if (age === "over"){
+    } else if (ageValue === "over"){
         finalPrize = ticketPrize * 0.6;
-    } else if (age === "adult"){
+    } else if (ageValue === "adult"){
         finalPrize = ticketPrize;
     }
 
     console.log(finalPrize);
+})
+
+buttonDelete.addEventListener("click", function(){
+    fullName.value = "";
+    distance.value = "";
 })
  
