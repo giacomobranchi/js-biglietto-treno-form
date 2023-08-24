@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <input type="text" id="fullName" placeholder="Nome e Cognome">
-    <input type="text" id="distance" placeholder="Km da percorrere">
-    <select name="" id="age">
-        <option value="minor">Minorenne</option>
-        <option value="adult">Adulto</option>
-        <option value="over">Over 65</option>
-    </select>
-    <button id="create">Genera</button>
-    <button id="delete">Annulla</button>
+    <div class="form">
+        <h1>Inserisci i tuoi dati</h1>
+        <div>
+            <input type="text" id="fullName" placeholder="Nome e Cognome">
+            <input type="text" id="distance" placeholder="Km da percorrere">
+            <select name="" id="age">
+                <option value="minor">Minorenne</option>
+                <option value="adult">Adulto</option>
+                <option value="over">Over 65</option>
+            </select>
+        </div>
+        <div>
+            <button id="create">Genera</button>
+            <button id="delete">Annulla</button>
+        </div>
+    </div>
 
+    <div class="Tickets"></div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
